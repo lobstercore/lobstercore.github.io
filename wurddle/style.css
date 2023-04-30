@@ -274,6 +274,7 @@ header {
   color: aliceblue;
   font-weight: 600;
   font-size: 1.5rem;
+  touch-action: manipulation;
 }
 
 .links_modal {

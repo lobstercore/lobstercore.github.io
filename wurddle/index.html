@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Wurrdle The Amzaing wurd Game!</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <div class="overlay close_modal"></div>
+    <div class="adbar">
+      <div class = 'ad'>
+        <h1>Plase buy and consume products.*</h1>
+        <p class="fine_print">* No actual products promoted or sold here.  This is a practice project, please don't sue me.</p>
+      </div>
+    </div>
+    <header>
+      <button class="nav side_nav">🌐</button>
+      <div class="nav title"><h2>Wurrdle</h2></div>
+      <button class="nav how_to_play">❔</button>
+      <button class="nav stats">🏆</button>
+      <button class="nav settings">⚙</button>
+    </header>
+
+    <div class="main">
+      <div class="notify_box"> </div>
+      <div class="links_modal">
+        <div class="links_header">
+          <h3>A game by Andy Wade</h3>
+          <button class="close_modal">✖</button>
+        </div>
+        <div class="links_body">
+          <h4>More projects by Andy Wade</h4>
+          <p><span class = 'emphasize'>These links all currently have no function.</span></p>
+          <a class="link">🐽 Pig Game</a>
+          <a class="link">❔ Guess my Number</a>
+        </div>
+        <div class="links_body2">
+          <a class="link">🎨 Andy's Portfolio</a>
+          <a class="link">🚲 About Andy</a>
+        </div>
+        <div class="links_footer">
+          <p>Questions, Comments, Find a bug?</p>
+          <p>Have a suggestion for somthing to add?</p>
+          <p>Want to give me a job?</p>
+          <button class="contact">Send me an email.</button>
+        </div>
+      </div>
+
+      <div class="how_to_play_modal">
+        <button class="close_modal">✖</button>
+        <h2>How To Play</h2>
+        <h3>Guess my secret Wurrdle in six tries.</h3>
+        <ul>
+          <li>Guess must be a valid 5-letter word.</li>
+          <li>The colors will change to show how close your guess was.</li>
+        </ul>
+        <h4>Examples:</h4>
+        <div class="example_row">
+          <div class="board_box_example green_example example_flip">S</div>
+          <div class="board_box_example">I</div>
+          <div class="board_box_example">L</div>
+          <div class="board_box_example">L</div>
+          <div class="board_box_example">Y</div>
+        </div>
+        <p>"S" is a correct letter in the correct position.</p>
+        <div class="example_row">
+          <div class="board_box_example">G</div>
+          <div class="board_box_example yellow_example example_flip">A</div>
+          <div class="board_box_example">M</div>
+          <div class="board_box_example">E</div>
+          <div class="board_box_example">S</div>
+        </div>
+        <p>"A" is a correct letter in the wrong position.</p>
+        <div class="example_row">
+          <div class="board_box_example">R</div>
+          <div class="board_box_example">U</div>
+          <div class="board_box_example gray_example example_flip">L</div>
+          <div class="board_box_example">E</div>
+          <div class="board_box_example">S</div>
+        </div>
+        <p>"L" is not in the word anywhere.</p>
+        <p>
+          You can play as much as you want.</p>  
+          <p>Stats will be reset if you close or
+            reload your browser window.
+          <p>The secret words are <span class = 'emphasize'>not curated.</span></p>
+          </p>It could be ANY 5 letter word. Difficulty is random.</p>
+          <p></p>
+      </div>
+
+      <div class="stats_modal">
+        <button class="close_modal close_stats">✖</button>
+        <h3>Statistics</h2>
+        <div class="stats_row">
+          <div class="stats_played">
+            <h1>0</h1>
+            <h5>Played</h5>
+          </div>
+          <div class="stats_win_rate">
+            <h1>100</h1>
+            <h5>Win &#37;</h5>
+          </div>
+          <div class="stats_current_streak">
+            <h1>0</h1>
+            <h5>Current Streak</h5>
+        </div>
+        <div class="stats_max_streak">
+          <h1>0</h1>
+          <h5>Max Streak</h5>
+        </div>
+      </div>
+        <h3>Guess Distribution:</h3>
+        <div class="guess_distribution_graph">
+          <div class="guess">
+            <div class="guess_number">1</div>
+            <div class="stat_bar bar_1">0</div>
+          </div>
+          <div class="guess">
+            <div class="guess_number">2</div>
+            <div class="stat_bar bar_2">0</div>
+          </div>
+          <div class="guess">
+            <div class="guess_number">3</div>
+            <div class="stat_bar bar_3">0</div>
+          </div>
+          <div class="guess">
+            <div class="guess_number">4</div>
+            <div class="stat_bar bar_4">0</div>
+          </div>
+          <div class="guess">
+            <div class="guess_number">5</div>
+            <div class="stat_bar bar_5">0</div>
+          </div>
+          <div class="guess">
+            <div class="guess_number">6</div>
+            <div class="stat_bar bar_6">0</div>
+          </div>
+        </div>
+        <div class="stats_footer">
+          <p>Your stats will reset when you reload or close your browser window.</p>
+          <p> Thanks for playing Wurrdle! 🤗</p>
+          <button class="start_over">Reset game and play again!</button>
+        </div>
+
+      </div>
+      <div class="game_board">
+        <div class="row row_1">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+        <div class="row row_2">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+        <div class="row row_3">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+        <div class="row row_4">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+        <div class="row row_5">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+        <div class="row row_6">
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+          <div class="board_box"></div>
+        </div>
+      </div>
+      <div class="alphabet_board">
+        <div class="alphabet_row alpha_one">
+          <button class="alpha_button Q">Q</button>
+          <button class="alpha_button W">W</button>
+          <button class="alpha_button E">E</button>
+          <button class="alpha_button R">R</button>
+          <button class="alpha_button T">T</button>
+          <button class="alpha_button Y">Y</button>
+          <button class="alpha_button U">U</button>
+          <button class="alpha_button I">I</button>
+          <button class="alpha_button O">O</button>
+          <button class="alpha_button P">P</button>
+        </div>
+        <div class="alphabet_row alpha_two">
+          <button class="alpha_button A">A</button>
+          <button class="alpha_button S">S</button>
+          <button class="alpha_button D">D</button>
+          <button class="alpha_button F">F</button>
+          <button class="alpha_button G">G</button>
+          <button class="alpha_button H">H</button>
+          <button class="alpha_button J">J</button>
+          <button class="alpha_button K">K</button>
+          <button class="alpha_button L">L</button>
+        </div>
+        <div class="alphabet_row alpha_three">
+          <button class="function_button enter">ENTER</button>
+          <button class="alpha_button Z">Z</button>
+          <button class="alpha_button X">X</button>
+          <button class="alpha_button C">C</button>
+          <button class="alpha_button V">V</button>
+          <button class="alpha_button B">B</button>
+          <button class="alpha_button N">N</button>
+          <button class="alpha_button M">M</button>
+          <button class="function_button back">🔙</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

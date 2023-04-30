@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: black;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+}
+
+h2 {
+  color: white;
+  display: inline;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.emphasize {
+  color: red;
+  font-weight: bold;
+}
+
+.adbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+  padding: 1rem;
+}
+
+.ad {
+  background-image: url("adbackground.jpeg");
+  max-width: 60%;
+  padding: 4rem;
+}
+
+.ad h1 {
+  padding: 1rem;
+}
+
+.adbar img {
+  max-height: 100px;
+  margin-bottom: 6rem;
+  flex: 1 1 50%;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.nav {
+  flex: 0 1 0;
+  max-height: 2rem;
+  margin: 0.2rem;
+}
+
+.title {
+  flex: 1 1 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid grey;
+}
+
+.notify_box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: larger;
+  font-weight: bolder;
+  position: absolute;
+  align-self: center;
+  margin-top: 0.2rem;
+  visibility: hidden;
+}
+
+.reveal {
+  animation-name: reveal;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes reveal {
+  from {
+    visibility: hidden;
+  }
+  to {
+    visibility: visible;
+  }
+}
+
+.game_board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  color: aliceblue;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.board_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.2rem;
+}
+
+.box_bounce:nth-child(1) {
+  animation-name: box_bounce;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+}
+
+.box_bounce:nth-child(2) {
+  animation-name: box_bounce;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 200ms;
+}
+
+.box_bounce:nth-child(3) {
+  animation-name: box_bounce;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 400ms;
+}
+
+.box_bounce:nth-child(4) {
+  animation-name: box_bounce;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 600ms;
+}
+
+.box_bounce:nth-child(5) {
+  animation-name: box_bounce;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 800ms;
+}
+
+@keyframes box_bounce {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.box_side_on {
+  transform: rotateX(90deg);
+}
+
+.box_normal {
+  transform: rotateX(0deg);
+}
+
+.box_flip {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.box_flip:nth-child(1) {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.box_flip:nth-child(2) {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 200ms;
+  animation-fill-mode: forwards;
+}
+
+.box_flip:nth-child(3) {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+}
+
+.box_flip:nth-child(4) {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 600ms;
+  animation-fill-mode: forwards;
+}
+
+.box_flip:nth-child(5) {
+  animation-name: box_flip;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-delay: 800ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes box_flip {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+.board_box_example {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid grey;
+  width: 3rem;
+  height: 3rem;
+  margin: 0.2rem;
+}
+
+.alphabet_board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alphabet_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.alpha_button,
+.function_button {
+  min-width: 3rem;
+  min-height: 4rem;
+  margin: 0.2rem;
+  background-color: rgb(176, 174, 174);
+  border-radius: 5px;
+  border: none;
+  color: aliceblue;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.links_modal {
+  z-index: 3;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 80vh;
+  justify-content: space-between;
+  color: white;
+  border-right: 1px solid rgb(15, 15, 15);
+  background-color: rgb(12, 11, 11);
+  opacity: 1;
+  visibility: hidden;
+}
+
+.links_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.links_header h3,
+.links_header button {
+  flex: 1 1 10%;
+}
+
+.close_modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  background-color: rgb(12, 11, 11);
+  color: white;
+}
+
+.links_body,
+.links_body2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  border-bottom: 1px solid white;
+}
+
+.links_footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid black;
+}
+
+.contact {
+  flex: 1 1 100%;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: rgb(12, 11, 11);
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.contact:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+a {
+  margin: 0.2rem;
+  flex: 1 1 100%;
+  padding: 0.3rem;
+  width: 100%;
+}
+
+a:hover {
+  background-color: rgb(57, 52, 52);
+}
+
+.how_to_play_modal {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(12, 11, 11);
+  border-radius: 10px;
+  align-self: center;
+  position: absolute;
+  padding: 1rem;
+  visibility: hidden;
+}
+
+.how_to_play_modal p {
+  margin: 0.2rem;
+}
+
+.green_example {
+  background-color: green;
+}
+
+.yellow_example {
+  background-color: rgb(154, 154, 9);
+}
+
+.gray_example {
+  background-color: gray;
+}
+.example_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.stats_modal {
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(12, 11, 11);
+  border-radius: 10px;
+  align-self: center;
+  position: absolute;
+  padding: 1rem;
+  visibility: hidden;
+}
+
+.stats_row {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+}
+
+.stats_row div {
+  flex: 1 1 0;
+}
+
+.guess_distribution_graph {
+  display: flex;
+  flex-direction: column;
+}
+
+.guess {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.guess div {
+  margin: 0.3rem;
+}
+
+.stat_bar {
+  background-color: green;
+  display: flex;
+  padding: 0.3rem;
+  justify-content: flex-end;
+  min-width: 0.5rem;
+}
+
+.stats_footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid gray;
+  align-items: center;
+  margin: 1rem;
+}
+
+.stats_footer p {
+  margin: 0.2rem;
+}
+
+.start_over {
+  padding: 1.5rem;
+  background-color: yellow;
+  border-radius: 10px;
+}
+
+.start_over:hover {
+  background-color: rgb(255, 255, 100);
+  border: 1px solid white;
+}
+
+.overlay {
+  position: absolute;
+  background-color: rgb(1, 1, 1);
+
+  z-index: 2;
+  opacity: 0.9;
+  height: 150%;
+  width: 100%;
+  flex: 1 1 1;
+  display: none;
+}
+
+.flash {
+  animation-name: flash;
+  animation-duration: 100ms;
+  animation-iteration-count: 1;
+}
+
+@keyframes flash {
+  from {
+    border: 1px solid gray;
+  }
+  to {
+    border: 1px solid white;
+  }
+}
+
+.shake {
+  animation-name: shake;
+  animation-duration: 100ms;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  from {
+    left: 2px;
+  }
+  to {
+    right: 2px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .alpha_button,
+  .function_button {
+    min-width: 2rem;
+    min-height: 3rem;
+    margin: 0.1rem;
+    background-color: rgb(176, 174, 174);
+    border-radius: 5px;
+    border: none;
+    color: aliceblue;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  .board_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    width: 3rem;
+    height: 3rem;
+    margin: 0.1rem;
+  }
+  .game_board {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .ad {
+    max-width: 100%;
+    max-height: 300px;
+  }
+  .links_modal {
+    width: 100%;
+  }
+}
